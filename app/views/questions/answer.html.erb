@@ -1,0 +1,26 @@
+  <div class="container">
+    <div class="row">
+      <h1>Stupid Coaching</h1>
+
+      <p><%= @your_message %></p>
+      <p>- You</p>
+
+      <p> <%=
+        if @your_message == "I am going to work right now!"
+          "Great!"
+        elsif @your_message.include?("?")
+          "Silly question, get dressed and go to work!"
+        else
+          "I don't care, get dressed and go to work!"
+        end
+        %>
+      </p>
+      <p>- Coach</p>
+
+      <%= link_to 'Ask another question', ask_path %>
+    </div>
+  </div>
+
+
+
+
